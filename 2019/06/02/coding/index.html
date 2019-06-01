@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="代码部分 1hello world!  第一篇文章不知道写什么，要熟悉一下markdown的用法  试试看不用的语法换行空两个格    看看代码的效果 1234567891011121314151617//调用支付宝支付接口    public function payByAlipay(Order $order,Request $request)    &amp;#123;        $this-&amp;g">
+<meta name="description" content="代码部分 1hello world  第一篇文章不知道写什么，要熟悉一下markdown的用法  试试看不用的语法换行空两个格    看看代码的效果 1234567891011121314151617//调用支付宝支付接口    public function payByAlipay(Order $order,Request $request)    &amp;#123;        $this-&amp;gt">
 <meta name="keywords" content="php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="coding">
 <meta property="og:url" content="http://yoursite.com/2019/06/02/coding/index.html">
 <meta property="og:site_name" content="honki">
-<meta property="og:description" content="代码部分 1hello world!  第一篇文章不知道写什么，要熟悉一下markdown的用法  试试看不用的语法换行空两个格    看看代码的效果 1234567891011121314151617//调用支付宝支付接口    public function payByAlipay(Order $order,Request $request)    &amp;#123;        $this-&amp;g">
+<meta property="og:description" content="代码部分 1hello world  第一篇文章不知道写什么，要熟悉一下markdown的用法  试试看不用的语法换行空两个格    看看代码的效果 1234567891011121314151617//调用支付宝支付接口    public function payByAlipay(Order $order,Request $request)    &amp;#123;        $this-&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-01T17:49:25.237Z">
+<meta property="og:updated_time" content="2019-06-01T18:14:20.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="coding">
-<meta name="twitter:description" content="代码部分 1hello world!  第一篇文章不知道写什么，要熟悉一下markdown的用法  试试看不用的语法换行空两个格    看看代码的效果 1234567891011121314151617//调用支付宝支付接口    public function payByAlipay(Order $order,Request $request)    &amp;#123;        $this-&amp;g">
+<meta name="twitter:description" content="代码部分 1hello world  第一篇文章不知道写什么，要熟悉一下markdown的用法  试试看不用的语法换行空两个格    看看代码的效果 1234567891011121314151617//调用支付宝支付接口    public function payByAlipay(Order $order,Request $request)    &amp;#123;        $this-&amp;gt">
 
 
 
@@ -341,7 +341,7 @@
 
       
         <p><strong>代码部分</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello world!</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
 
 <p><strong>第一篇文章不知道写什么，要熟悉一下markdown的用法</strong></p>
 <blockquote>
@@ -349,8 +349,6 @@
 </blockquote>
 <p><strong>看看代码的效果</strong></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用支付宝支付接口</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">payByAlipay</span><span class="params">(Order $order,Request $request)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;authorize(<span class="string">'own'</span>,$order);</span><br><span class="line">        <span class="keyword">if</span> ($order-&gt;paid_at || $order-&gt;closed)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> InvalidRequestException(<span class="string">'订单状态不正确'</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用支付宝的网页支付</span></span><br><span class="line">        <span class="keyword">return</span> app(<span class="string">'alipay'</span>)-&gt;web([</span><br><span class="line">            <span class="string">'out_trade_no'</span> =&gt; $order-&gt;no, <span class="comment">// 订单编号，需保证在商户端不重复</span></span><br><span class="line">            <span class="string">'total_amount'</span> =&gt; $order-&gt;total_amount, <span class="comment">// 订单金额，单位元，支持小数点后两位</span></span><br><span class="line">            <span class="string">'subject'</span>      =&gt; <span class="string">'支付 Laravel Shop 的订单：'</span>.$order-&gt;no, <span class="comment">// 订单标题</span></span><br><span class="line">        ]);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
       
     </div>
     
