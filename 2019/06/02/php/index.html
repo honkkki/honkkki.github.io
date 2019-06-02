@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="HONKI GROUND">
 <meta property="og:description" content="php变量 在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，**要在一个函数中访问一个全局变量，需要使用 global 关键字。**  在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-02T13:46:41.004Z">
+<meta property="og:updated_time" content="2019-06-02T14:49:26.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php基础巩固">
 <meta name="twitter:description" content="php变量 在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，**要在一个函数中访问一个全局变量，需要使用 global 关键字。**  在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;">
@@ -380,6 +380,8 @@
 <blockquote>
 <p>array_merge后面数组相同键对应值覆盖前面数组相同键对应的值<br><br>+是前面的覆盖后面的。</p>
 </blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 优先级： &amp;&amp;  &gt;  =  &gt;  and</span></span><br><span class="line"><span class="comment">// 优先级： ||  &gt;  =  &gt;  or</span></span><br><span class="line"> </span><br><span class="line">$a = <span class="number">3</span>;</span><br><span class="line">$b = <span class="keyword">false</span>;</span><br><span class="line">$c = $a <span class="keyword">or</span> $b;</span><br><span class="line">var_dump($c);          <span class="comment">// 这里的 $c 为 int 值3，而不是 boolean 值 true</span></span><br><span class="line">$d = $a || $b;</span><br><span class="line">var_dump($d);          <span class="comment">//这里的 $d 就是 boolean 值 true</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
