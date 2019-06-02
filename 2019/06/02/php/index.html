@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="php变量在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，要在一个函数中访问一个全局变量，需要使用 global 关键字。 在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;     $y=10;">
+<meta name="description" content="php变量 在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，**要在一个函数中访问一个全局变量，需要使用 global 关键字。**  在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;">
 <meta name="keywords" content="php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="php基础巩固">
 <meta property="og:url" content="http://yoursite.com/2019/06/02/php/index.html">
 <meta property="og:site_name" content="HONKI GROUND">
-<meta property="og:description" content="php变量在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，要在一个函数中访问一个全局变量，需要使用 global 关键字。 在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;     $y=10;">
+<meta property="og:description" content="php变量 在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，**要在一个函数中访问一个全局变量，需要使用 global 关键字。**  在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-02T08:45:04.575Z">
+<meta property="og:updated_time" content="2019-06-02T08:53:05.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php基础巩固">
-<meta name="twitter:description" content="php变量在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，要在一个函数中访问一个全局变量，需要使用 global 关键字。 在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;     $y=10;">
+<meta name="twitter:description" content="php变量 在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，**要在一个函数中访问一个全局变量，需要使用 global 关键字。**  在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问： 123456789101112131415161718&amp;lt;?php $x=5; // 全局变量 function myTest() &amp;#123;">
 
 
 
@@ -340,7 +340,9 @@
       
 
       
-        <h1 id="php变量"><a href="#php变量" class="headerlink" title="php变量"></a>php变量</h1><p>在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，<strong>要在一个函数中访问一个全局变量，需要使用 global 关键字。</strong></p>
+        <h1 id="php变量"><a href="#php变量" class="headerlink" title="php变量"></a>php变量</h1><br>
+在所有函数外部定义的变量，拥有全局作用域。除了函数外，全局变量可以被脚本中的任何部分访问，**要在一个函数中访问一个全局变量，需要使用 global 关键字。**
+
 <p>在 PHP 函数内部声明的变量是局部变量，仅能在函数内部访问：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">$x=<span class="number">5</span>; <span class="comment">// 全局变量 </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myTest</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    $y=<span class="number">10</span>; <span class="comment">// 局部变量 </span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;p&gt;测试函数内变量:&lt;p&gt;"</span>; </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"变量 x 为: $x"</span>;      <span class="comment">//</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;br&gt;"</span>; </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"变量 y 为: $y"</span>; </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">myTest(); </span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;p&gt;测试函数外变量:&lt;p&gt;"</span>; </span><br><span class="line"><span class="keyword">echo</span> <span class="string">"变量 x 为: $x"</span>; </span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;br&gt;"</span>; </span><br><span class="line"><span class="keyword">echo</span> <span class="string">"变量 y 为: $y"</span>; </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -360,12 +362,13 @@
 </blockquote>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"这是一个"</span>, <span class="string">"字符串，"</span>, <span class="string">"使用了"</span>, <span class="string">"多个"</span>, <span class="string">"参数。"</span>;</span><br></pre></td></tr></table></figure>
 
-<h1 id="php类型"><a href="#php类型" class="headerlink" title="php类型"></a>php类型</h1><blockquote>
-<ul>
-<li>松散比较：使用两个等号 == 比较，只比较值，不比较类型。</li>
-<li>严格比较：用三个等号 === 比较，除了比较值，也比较类型。</li>
-</ul>
-</blockquote>
+<br>
+
+
+<h1 id="php类型"><a href="#php类型" class="headerlink" title="php类型"></a>php类型</h1><br>
+>* 松散比较：使用两个等号 == 比较，只比较值，不比较类型。
+>* 严格比较：用三个等号 === 比较，除了比较值，也比较类型。
+
 <p>详细的比较：<a href="https://www.runoob.com/php/php-types-comparisons.html" target="_blank" rel="noopener">类型比较</a></p>
 
       
