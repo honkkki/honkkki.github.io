@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="HONKI GROUND">
 <meta property="og:description" content="原理：比较两个相邻的元素，将值大的元素交换至右端。  思路：依次比较相邻的两个数，将小数放在前面，大数放在后面。即在第一趟：首先比较第1个和第2个数，将小数放前，大数放后。然后比较第2个数和第3个数，将小数放前，大数放后，如此继续，直至比较最后两个数，将小数放前，大数放后。重复第一趟步骤，直至全部排序完成。  第一趟比较完成后，最后一个数一定是数组中最大的一个数，所以第二趟比较的时候最后一个数不参">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-04T15:50:38.776Z">
+<meta property="og:updated_time" content="2019-06-04T15:58:09.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最好理解的冒泡排序">
 <meta name="twitter:description" content="原理：比较两个相邻的元素，将值大的元素交换至右端。  思路：依次比较相邻的两个数，将小数放在前面，大数放在后面。即在第一趟：首先比较第1个和第2个数，将小数放前，大数放后。然后比较第2个数和第3个数，将小数放前，大数放后，如此继续，直至比较最后两个数，将小数放前，大数放后。重复第一趟步骤，直至全部排序完成。  第一趟比较完成后，最后一个数一定是数组中最大的一个数，所以第二趟比较的时候最后一个数不参">
@@ -379,6 +379,11 @@
 <p>　　　　第二趟总共进行了1次比较， 排序结果：  1  2  3  6  8  9</p>
 <hr>
 <p>最终结果：1  2  3  6  8  9</p>
+<blockquote>
+<p>由此可见：N个数字要排序完成，总共进行N-1趟排序，每i趟的排序次数为(N-i)次，所以可以用双重循环语句，外层控制循环多少趟，内层控制每一趟的循环次数。</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$arr = [<span class="number">2</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">8</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maopao</span><span class="params">($array)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $count = count($array);</span><br><span class="line">    <span class="keyword">for</span>($i = <span class="number">1</span>;$i&lt;$count;$i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>($j = <span class="number">0</span>;$j&lt;$count-$i;$j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>($array[$j]&gt;$array[$j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                $tem = $array[$j];</span><br><span class="line">                $array[$j]= $array[$j+<span class="number">1</span>];</span><br><span class="line">                $array[$j+<span class="number">1</span>] = $tem;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> $array;</span><br><span class="line">&#125;</span><br><span class="line">$res = maopao($arr);</span><br><span class="line">print_r($res);</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
